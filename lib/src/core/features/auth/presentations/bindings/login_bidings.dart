@@ -1,9 +1,14 @@
 import 'package:get/get.dart';
+import 'package:post/src/core/features/auth/data/login_repository_impl.dart';
+import 'package:post/src/core/features/auth/domain/usecases/login_usecase.dart';
+import 'package:post/src/core/utils/dio_helper.dart';
 import '../controllers/login_controller.dart';
 
 class LoginBiding implements Bindings {
   @override
   void dependencies() {
-    Get.put<LoginController>(LoginController());
+    final LoginUseCase loginUseCase =
+        LoginUseCase(LoginRepositoryImpl(Get.find<CustomDio>()));
+    Get.put<LoginController>(LoginController(loginUseCase));
   }
 }

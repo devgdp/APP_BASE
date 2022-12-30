@@ -9,11 +9,12 @@ class SplashPage extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) {
+    controller.loading();
     return Scaffold(
       body: Center(
         child: Container(
           decoration: const BoxDecoration(
-            image: DecorationImage(image: AssetImage(AppAssets.logo)),
+            image: DecorationImage(image: AssetImage(AppAssets.logoSplash)),
           ),
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:post/src/config/routes/app_routes.dart';
 import '/src/config/routes/app_pages.dart';
 import '/src/core/features/app/presentations/bindings/app_bindings.dart';
 
+import 'src/config/themes/app_theme.dart';
 import 'src/core/helpers/app_helper.dart';
 
 main() {
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
       getPages: AppPages.pages,
       initialBinding: AppBinding(),
       initialRoute: AppRoutes.SPLASH,
+      theme: AppTheme.defaultTheme,
     );
   }
 }
