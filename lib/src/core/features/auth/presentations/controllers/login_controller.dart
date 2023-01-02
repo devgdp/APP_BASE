@@ -63,7 +63,6 @@ class LoginController extends GetxController {
   Future<void> login() async {
     final LoginParams params = LoginParams(
         identifier: emailController.text, password: passwordController.text);
-
     final login = await loginUseCase.execute(params);
     login.fold((l) => log(l.message.toString()), (r) {
       setDioToken(r.jwt.toString());

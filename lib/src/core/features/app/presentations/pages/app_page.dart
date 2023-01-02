@@ -1,6 +1,9 @@
+// ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:post/main.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:post/src/config/themes/app_assets.dart';
 import 'package:post/src/core/features/app/presentations/controllers/app_controllers.dart';
 import 'package:post/src/core/features/app/widgets/app_bottom_navigator.dart';
 
@@ -14,11 +17,11 @@ class AppPage extends GetView<AppController> {
   ValueNotifier<int> currentPage = ValueNotifier(Get.arguments?['page'] ?? 0);
 
   List<Map<String, dynamic>> bottomNavItems = [
-    {'icon': Icons.home, 'label': 'Home'},
-    {'icon': Icons.person_add, 'label': 'Cadastro'},
-    {'icon': Icons.qr_code, 'label': 'Produtos'},
-    {'icon': Icons.car_rental, 'label': 'Carros'},
-    {'icon': Icons.shopping_cart, 'label': 'OS'},
+    {'NavIcon': SvgPicture.asset(AppAssets.iconHome), 'label': 'Home'},
+    {'NavIcon': SvgPicture.asset(AppAssets.iconPersonAdd), 'label': 'Cadastro'},
+    {'NavIcon': SvgPicture.asset(AppAssets.iconQrCode), 'label': 'Produtos'},
+    {'NavIcon': SvgPicture.asset(AppAssets.iconCarRepair), 'label': 'Carros'},
+    {'NavIcon': SvgPicture.asset(AppAssets.iconShoppingCart), 'label': 'OS'},
   ];
 
   List<Widget> pages = [

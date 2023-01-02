@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../../core/features/app/presentations/pages/app_page.dart';
 
 import '../../config/routes/app_routes.dart';
 import '../../core/features/auth/presentations/bindings/login_bidings.dart';
@@ -15,6 +16,11 @@ abstract class AppPages {
     GetPage(
       name: AppRoutes.LOGIN,
       page: () => const LoginPage(),
+      binding: LoginBiding(),
+    ),
+    GetPage(
+      name: AppRoutes.APP,
+      page: () => AppPage(),
       binding: LoginBiding(),
     ),
   ];

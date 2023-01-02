@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../config/themes/app_assets.dart';
 import '../../../../config/themes/app_colors.dart';
 import 'bottom_nav_item.dart';
 
@@ -31,10 +33,10 @@ class AppBottomNavigator extends StatelessWidget {
             int index = bottomNavItems.indexOf(item);
             return InkWell(
               onTap: () => onTap(index),
-              child: BottomNavitem(
+              child: BottomNavItem(
                 label: item['label'],
                 checked: (currentPage == index),
-                icon: item['icon'],
+                icon: SvgPicture.asset(item['NavItem']),
               ),
             );
           }).toList(),

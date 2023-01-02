@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BottomNavitem extends StatelessWidget {
+class BottomNavItem extends StatelessWidget {
   final String label;
   final bool checked;
-  final Icon icon;
+  final dynamic icon;
 
-  const BottomNavitem(
+  const BottomNavItem(
       {super.key,
       required this.label,
       this.checked = false,
@@ -17,7 +17,7 @@ class BottomNavitem extends StatelessWidget {
       duration: const Duration(milliseconds: 300),
       opacity: (checked) ? 1 : 0.7,
       child: Column(
-        children: [Text(label)],
+        children: [icon, Text(label)],
       ),
     );
   }
