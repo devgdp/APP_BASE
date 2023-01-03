@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
+import 'package:post/src/core/network/network_config.dart';
 import 'package:post/src/features/auth/domain/entities/login_params.dart';
 import 'package:post/src/features/app/domain/entities/user_app.dart';
 import 'package:post/src/core/errors/failure.dart';
@@ -16,8 +17,8 @@ class LoginRepositoryImpl extends LoginRepository {
   @override
   Future<Either<Failure, UserApp>> login(LoginParams params) async {
     try {
-      final response =
-          await dioClient.post(ApiRoutes.login, data: params.toJson());
+      final response = await dioClient
+          .post(NetworkConfig.baseUrl + ApiRoutes.login, data: params.toJson());
       return Right(UserApp.fromJson(response.data));
     } on DioError catch (err) {
       log(err.toString());

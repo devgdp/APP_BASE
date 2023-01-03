@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:post/src/config/themes/app_assets.dart';
 import 'package:post/src/features/app/presentations/controllers/app_controllers.dart';
 import 'package:post/src/features/app/widgets/app_bottom_navigator.dart';
+import 'package:post/src/features/cadastro/presentations/pages/register_page.dart';
 
 class AppPage extends GetView<AppController> {
   AppPage({super.key});
@@ -26,7 +27,7 @@ class AppPage extends GetView<AppController> {
 
   List<Widget> pages = [
     const Text('Home'),
-    const Text('Cadastro'),
+    const RegisterPage(),
     const Text('Produtos'),
     const Text('Carros'),
     const Text('OS'),
