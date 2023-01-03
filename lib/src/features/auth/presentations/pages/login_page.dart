@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:post/src/config/themes/app_assets.dart';
-import 'package:post/src/core/features/auth/widgets/custom_button.dart';
-import 'package:post/src/core/features/auth/widgets/custom_text_field.dart';
+import 'package:post/src/features/auth/widgets/custom_button.dart';
+import 'package:post/src/features/auth/widgets/custom_text_field.dart';
 
 import '../controllers/login_controller.dart';
 
@@ -12,8 +11,8 @@ class LoginPage extends GetView<LoginController> {
 
   showAlertDialog(BuildContext context) {
     AlertDialog alert = AlertDialog(
-      content: Row(children: [
-        const CircularProgressIndicator(),
+      content: Row(children: const [
+        CircularProgressIndicator(),
       ]),
     );
     showDialog(

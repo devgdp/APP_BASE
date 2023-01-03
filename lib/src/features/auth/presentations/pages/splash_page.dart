@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../../config/themes/app_assets.dart';
+import '../../../../config/themes/app_assets.dart';
 import '../controllers/login_controller.dart';
 
 class SplashPage extends GetView<LoginController> {

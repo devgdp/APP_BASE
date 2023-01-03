@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:post/src/config/routes/app_routes.dart';
-import 'package:post/src/core/features/app/domain/entities/user_app.dart';
-import 'package:post/src/core/features/app/presentations/controllers/app_controllers.dart';
-import 'package:post/src/core/features/auth/domain/entities/login_params.dart';
-import 'package:post/src/core/features/auth/domain/usecases/login_usecase.dart';
+import 'package:post/src/features/app/domain/entities/user_app.dart';
+import 'package:post/src/features/app/presentations/controllers/app_controllers.dart';
+import 'package:post/src/features/auth/domain/entities/login_params.dart';
+import 'package:post/src/features/auth/domain/usecases/login_usecase.dart';
 
-import '../../../../utils/dio_helper.dart';
+import '../../../../core/utils/dio_helper.dart';
 
 class LoginController extends GetxController {
   final AppController appController = Get.find();

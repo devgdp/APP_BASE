@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:post/src/config/themes/app_assets.dart';
-import 'package:post/src/core/features/app/presentations/controllers/app_controllers.dart';
-import 'package:post/src/core/features/app/widgets/app_bottom_navigator.dart';
+import 'package:post/src/features/app/presentations/controllers/app_controllers.dart';
+import 'package:post/src/features/app/widgets/app_bottom_navigator.dart';
 
 class AppPage extends GetView<AppController> {
   AppPage({super.key});
@@ -17,11 +17,11 @@ class AppPage extends GetView<AppController> {
   ValueNotifier<int> currentPage = ValueNotifier(Get.arguments?['page'] ?? 0);
 
   List<Map<String, dynamic>> bottomNavItems = [
-    {'NavIcon': SvgPicture.asset(AppAssets.iconHome), 'label': 'Home'},
-    {'NavIcon': SvgPicture.asset(AppAssets.iconPersonAdd), 'label': 'Cadastro'},
-    {'NavIcon': SvgPicture.asset(AppAssets.iconQrCode), 'label': 'Produtos'},
-    {'NavIcon': SvgPicture.asset(AppAssets.iconCarRepair), 'label': 'Carros'},
-    {'NavIcon': SvgPicture.asset(AppAssets.iconShoppingCart), 'label': 'OS'},
+    {'icon': AppAssets.iconHome, 'label': 'Home'},
+    {'icon': AppAssets.iconPersonAdd, 'label': 'Cadastro'},
+    {'icon': AppAssets.iconQrCode, 'label': 'Produtos'},
+    {'icon': AppAssets.iconCarRepair, 'label': 'Carros'},
+    {'icon': AppAssets.iconShoppingCart, 'label': 'OS'},
   ];
 
   List<Widget> pages = [

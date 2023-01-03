@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import '../../core/features/app/presentations/pages/app_page.dart';
+import '../../features/app/presentations/pages/app_page.dart';
 
 import '../../config/routes/app_routes.dart';
-import '../../core/features/auth/presentations/bindings/login_bidings.dart';
-import '../../core/features/auth/presentations/pages/splash_page.dart';
-import '../../core/features/auth/presentations/pages/login_page.dart';
+import '../../features/auth/presentations/bindings/login_bidings.dart';
+import '../../features/auth/presentations/pages/splash_page.dart';
+import '../../features/auth/presentations/pages/login_page.dart';
 
 abstract class AppPages {
   static final pages = [

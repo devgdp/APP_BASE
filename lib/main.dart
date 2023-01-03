@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:post/src/config/routes/app_routes.dart';
 import '/src/config/routes/app_pages.dart';
-import '/src/core/features/app/presentations/bindings/app_bindings.dart';
+import 'src/features/app/presentations/bindings/app_bindings.dart';
 
 import 'src/config/themes/app_theme.dart';
 import 'src/core/helpers/app_helper.dart';

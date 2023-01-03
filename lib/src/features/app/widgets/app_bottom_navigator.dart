@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../config/themes/app_assets.dart';
-import '../../../../config/themes/app_colors.dart';
+import '../../../config/themes/app_colors.dart';
 import 'bottom_nav_item.dart';
 
 class AppBottomNavigator extends StatelessWidget {
@@ -36,7 +35,7 @@ class AppBottomNavigator extends StatelessWidget {
               child: BottomNavItem(
                 label: item['label'],
                 checked: (currentPage == index),
-                icon: SvgPicture.asset(item['NavItem']),
+                icon: item['icon'],
               ),
             );
           }).toList(),

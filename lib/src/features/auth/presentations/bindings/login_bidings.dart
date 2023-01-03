@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:post/src/core/features/auth/data/login_repository_impl.dart';
-import 'package:post/src/core/features/auth/domain/usecases/login_usecase.dart';
+import 'package:post/src/features/auth/data/login_repository_impl.dart';
+import 'package:post/src/features/auth/domain/usecases/login_usecase.dart';
 import 'package:post/src/core/utils/dio_helper.dart';
 import '../controllers/login_controller.dart';
 

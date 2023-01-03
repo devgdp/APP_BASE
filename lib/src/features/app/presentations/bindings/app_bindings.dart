@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../../../../utils/dio_helper.dart';
+import '../../../../core/utils/dio_helper.dart';
 import '../controllers/app_controllers.dart';
 
 class AppBinding implements Bindings {
